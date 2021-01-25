@@ -1,12 +1,21 @@
+import colors from "../utils/colors";
+
 const PlayNumber = (props) => {
   const number = props.number;
+  const status = props.status;
 
   const handleClick = () => {
-    console.log(props.number);
+    props.onClick(number, status);
   };
 
-  return(
-    <button className="number" onClick={handleClick}>{number}</button>
+  return (
+    <button
+      className="number"
+      onClick={handleClick}
+      style={{ backgroundColor: colors[status] }}
+    >
+      {number}
+    </button>
   );
 };
 

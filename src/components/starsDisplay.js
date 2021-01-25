@@ -1,4 +1,3 @@
-import React from "react";
 import utils from "../utils/utils";
 
 const StarsDisplay = (props) => {
